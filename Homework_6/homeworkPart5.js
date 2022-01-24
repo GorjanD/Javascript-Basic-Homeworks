@@ -24,12 +24,11 @@ function columnsArrayFunction(columnNumber){
 }
 
 function createTable(array, array2, element){
-    element.innerHTML = "";
     for(let x = 0; x < array.length; x++){
         element.innerHTML += "<tr>";
             for(let y = 0; y < array2.length; y++){
-                var element2 = document.createElement("row");
-                element2.innerHTML += `<td>${array[x]}, ${array2[y]}</td>`;
+                var element2 = document.createElement("td");
+                element2.innerHTML += `${array[x]}, ${array2[y]}`;
                 document.getElementById("table").appendChild(element2);
             }
         element.innerHTML += "</tr>";
